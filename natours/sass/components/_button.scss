@@ -13,18 +13,18 @@
         transform: translateY(-3px);
         box-shadow: 0 1rem 2rem rgba($color-black,.2);
 
-        &::after{
+        &::after {
             transform: scaleX(1.4) scaleY(1.6); /* 1.4x the size */
             opacity: 0;
         }
     }
 
-    &:active{
+    &:active {
         transform: translateY(-1px);
         box-shadow: 0 .5rem 1rem rgba($color-black,.2);
     }
 
-    &--white{
+    &--white {
         background-color: $color-white;
         color: $color-grey-dark;
 
@@ -33,7 +33,16 @@
         }
     }
 
-    &::after{
+    &--green {
+        background-color: $color-primary;
+        color: $color-white;
+
+        &::after{
+            background-color: $color-primary;
+        }
+    }
+
+    &::after {
         content: "";
         display: inline-block;
         height: 100%;
@@ -46,7 +55,7 @@
         transition: all .4s;
     }
 
-    &--animated{
+    &--animated {
         animation: moveInBottom .5s ease-out .75s; /* animation name, duration, timing function and delay */
         animation-fill-mode: backwards;  /* it apply 0%(we assigned upper in animation moveInBottom) style of the animation before the animation starts (it is opacity: 0)*/
     }
